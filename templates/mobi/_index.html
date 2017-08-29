@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>UC Star</title>
+    <meta name="description" content="">
+    <meta name="front-end" content="MrF">
+    <link rel="stylesheet" href="{$style_path}/css/main.css?t=1503923882065">
+</head>
+{literal}
+<body>
+<div class="loading">
+    <div class="logo">UC News</div>
+    <p id="loading-num">0%</p>
+    <canvas id="loading-line"></canvas>
+</div>
+<div class="swiper-container" id="swiper">
+    <div class="swiper-wrapper">
+
+        <section class="swiper-slide bg1">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>
+            <div class="sub-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s">Data comes from UC News</div>
+            <div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"></div>
+            <div class="bg1-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">UC Star</div>
+            <div class="bg1-title ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s">August 4th Week Report<br><span>21 August - 27 August</span></div>
+            <div class="circle c1 ani"></div>
+            <div class="circle c2 ani"></div>
+            <div class="circle c3 ani"></div>
+            <div class="ani line1"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s"></div>
+            <div class="ani line2" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="3.2s"></div>
+            <div class="circle-line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s">></div>
+            <p class="actor-name ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="3.2s">sonam kapoor</p>
+            <img src="" alt="" class="actor-img ani" swiper-animate-effect="bounceIn2" swiper-animate-duration="0.5s" swiper-animate-delay="2.8s">
+            <a class="share"></a>
+            <div class="slide"></div>
+        </section>
+
+        <section class="swiper-slide bg2">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>
+            <div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s"></div>
+            <div class="bg2-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">Hot Key Word</div>
+            <a class="btn ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s" open-page="bg2-sub-page">Check the history</a>
+            <a class="share"></a>
+            <div class="slide"></div>
+            <div class="echart ani" id="graph"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.4s" open-page="bg2-sub-page"></div>
+
+            <!--子页面-->
+            <div class="bg2-sub-page sub-page">
+                <a class="back"></a>
+                <div class="logo">UC News</div>
+                <section class="bg2-col">
+                    <h2>14 August --20 August 2017</h2>
+                    <div class="bg2-c2">
+                        <div class="circle1">Long Leg</div>
+                        <div class="circle2">Young</div>
+                        <div class="circle3">Beauty</div>
+                        <div class="circle4">Good at<br>cooking</div>
+                        <div class="circle5">Cute</div>
+                        <div class="circle6">Humorous</div>
+                    </div>
+                </section>
+                <section class="bg2-col">
+                    <h2>07 August --13 August 2017</h2>
+                    <div class="bg2-c2">
+                        <div class="circle1">Long Leg</div>
+                        <div class="circle2">Young</div>
+                        <div class="circle3">Beauty</div>
+                        <div class="circle4">Good at<br>cooking</div>
+                        <div class="circle5">Cute</div>
+                        <div class="circle6">Humorous</div>
+                    </div>
+                </section>
+                <section class="bg2-col">
+                    <h2>31 August --06 August 2017</h2>
+                    <div class="bg2-c2">
+                        <div class="circle1">Long Leg</div>
+                        <div class="circle2">Young</div>
+                        <div class="circle3">Beauty</div>
+                        <div class="circle4">Good at<br>cooking</div>
+                        <div class="circle5">Cute</div>
+                        <div class="circle6">Humorous</div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!--<section class="swiper-slide bg3">-->
+            <!--<div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>-->
+            <!--<div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s"></div>-->
+            <!--<div class="bg3-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">Tier of Popularity Index</div>-->
+            <!--<a class="ques btn ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.4s" open-page="bg3-sub-page"></a>-->
+
+            <!--<div class="bg3-tab-con ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">-->
+                <!--<div class="echart-line" id="echart1" ></div>-->
+                <!--<div class="bg3-chart-intro">popularity index {120}<i></i>popularity index {150}</div>-->
+                <!--<blockquote>You are quite hot now with raised  index</blockquote>-->
+            <!--</div>-->
+            <!--<div class="bg3-tab-con hide">-->
+                <!--<div class="echart-line" id="echart2" ></div>-->
+                <!--<div class="bg3-chart-intro" >popularity index {120}<i></i>popularity index {150}</div>-->
+                <!--<blockquote>You are quite hot now with raised  index</blockquote>-->
+            <!--</div>-->
+            <!--<div class="bg3-tab-con hide">-->
+                <!--<div class="echart-line" id="echart3" ></div>-->
+                <!--<div class="bg3-chart-intro">popularity index {120}<i></i>popularity index {150}</div>-->
+                <!--<blockquote >You are quite hot now with raised  index</blockquote>-->
+            <!--</div>-->
+
+            <!--<a class="share"></a>-->
+            <!--<div class="slide"></div>-->
+            <!--<a class="bg3-btn ani  bg3-btn1 bg3-btn-on" data-open="0" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s"></a>-->
+            <!--<a class="bg3-btn ani  bg3-btn2"  data-open="1" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s"></a>-->
+            <!--<a class="bg3-btn ani  bg3-btn3"  data-open="2" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="2.2s"></a>-->
+
+            <!--&lt;!&ndash;子页面&ndash;&gt;-->
+            <!--<div class="bg3-sub-page sub-page">-->
+                <!--<a class="back"></a>-->
+                <!--<div class="logo">UC News</div>-->
+                <!--<h2>How to get the index</h2>-->
+                <!--<h3>Author: UC News</h3>-->
+                <!--<section class="bg3-col">-->
+                    <!--<h4>Title</h4>-->
+                    <!--<p>For positive news, reviews and higher rankings, take part in the activities recommended by UC News.</p>-->
+                <!--</section>-->
+                <!--<section class="bg3-col">-->
+                    <!--<h4>Title</h4>-->
+                    <!--<p>For positive news, reviews and higher rankings, take part in the activities recommended by UC News.</p>-->
+                <!--</section>-->
+                <!--<section class="bg3-col">-->
+                    <!--<h4>Title</h4>-->
+                    <!--<p>For positive news, reviews and higher rankings, take part in the activities recommended by UC News.</p>-->
+                <!--</section>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <!--<section class="swiper-slide bg4">-->
+            <!--<div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>-->
+            <!--<div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"></div>-->
+            <!--<div class="bg4-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">Ranking list for this week</div>-->
+            <!--<div class="bg4-icon ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s"></div>-->
+            <!--<div class="ani bg4-line bg4-line1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.8s"></div>-->
+            <!--<div class="ani bg4-line bg4-line2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.6s"></div>-->
+            <!--<div class="ani bg4-line bg4-line3" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.4s"></div>-->
+            <!--<div class="ani bg4-line bg4-line4" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.2s"></div>-->
+            <!--<div class="ani bg4-line bg4-line5" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s"></div>-->
+            <!--<div class="ani bg4-line bg4-line6" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s"></div>-->
+            <!--<a class="share"></a>-->
+            <!--<div class="slide"></div>-->
+            <!--<div class="data-col data-col1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.8s"><span class="data1">29</span><span class="data2">Anushkar</span><span class="data3">160</span><div class="data-col-title">No.<span>Name</span>Index</div></div>-->
+            <!--<div class="data-col data-col2 data-col-cur ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.4s"><span class="data1">30</span><span class="data2">Anushkar</span><span class="data3">160</span></div>-->
+            <!--<div class="data-col data-col3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.2s"><span class="data1">30</span><span class="data2">Anushkar</span><span class="data3">160</span></div>-->
+            <!--<div class="data-col data-col4 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s"><span class="data1">30</span><span class="data2">Anushkar</span><span class="data3">160</span></div>-->
+
+            <!--<div class="bg4-chart-intro ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">Position: 35<i></i>Slipped by 1 position</div>-->
+        <!--</section>-->
+
+        <section class="swiper-slide bg5">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>
+            <div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".8s"></div>
+            <div class="bg5-tab bg5-tab-on bg5-btn1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s">Article</div>
+            <div class="bg5-tab bg5-btn2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">Engagement</div>
+            <div class="tab-cont tab-cont1">
+                <h2 class="ani"  swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.4s">Total articles : <span>236000</span></h2>
+                <blockquote class="ani"  swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">You are one of the most liked stars being<br>mentioned everywhere this week.</blockquote>
+                <div class="echart-pie"><div id="echart4"></div></div>
+            </div>
+            <a class="share"></a>
+            <div class="slide"></div>
+            <div class="tab-cont tab-cont2 hide">
+                <h2>Total articles : <span>90098800</span></h2>
+                <blockquote>You are one of the most discussed stars this week.</blockquote>
+                <div class="echart-pie"><div id="echart5"></div></div>
+            </div>
+
+        </section>
+
+        <section class="swiper-slide bg6">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>
+            <div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"></div>
+            <div class="bg6-logo ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">Hot comments</div>
+            <div class="bg6-col ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">
+                <div class="zan"><i></i>666</div>
+                <h4>David</h4>
+                <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+            </div>
+            <div class="bg6-col ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.0s">
+                <div class="zan"><i></i>666</div>
+                <h4>David</h4>
+                <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+            </div>
+            <div class="bg6-col ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.2s">
+                <div class="zan"><i></i>666</div>
+                <h4>David</h4>
+                <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+            </div>
+            <div class="bg6-col ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.4s">
+                <div class="zan"><i></i>666</div>
+                <h4>David</h4>
+                <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+            </div>
+            <div class="bg6-col ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.6s">
+                <div class="zan"><i></i>666</div>
+                <h4>David</h4>
+                <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+            </div>
+            <a class="share"></a>
+            <div class="slide"></div>
+            <a class="btn ani bg6-btn"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.8s" open-page="bg6-sub-page">MORE</a>
+
+            <!--子页面-->
+            <div class="bg6-sub-page sub-page">
+                <a class="back bg6-back"></a>
+                <div class="logo">UC News</div>
+                <div class="scroll-wrap">
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                    <div class="bg6-col">
+                        <div class="zan"><i></i>666</div>
+                        <h4>David</h4>
+                        <p>To get more positive and hot topics , and to get higher position in ranking list ,you are recommended to take part in those hot activities UC news provided.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="swiper-slide bg7">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>
+            <div class="slide2"></div>
+            <div class="bg7-intro ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".8s">
+                Thank you for reading this report.<br>
+                If you have any suggestion about the report , please feel free to tell us .
+            </div>
+            <a class="bg7-btn btn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s" open-page="bg7-sub-page">Click to  book the {Q&A GAME}</a><a class="bg7-btn share-btn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">Share</a>
+            <a class="share"></a>
+
+            <!--子页面-->
+            <div class="bg7-sub-page sub-page">
+                <a class="back bg7-back"></a>
+                <div class="logo">UC News</div>
+                <h2>Q&A game</h2>
+                <dl>
+                    <dt>Time</dt>
+                    <dd><input type="text"></dd>
+                </dl>
+                <a class="sub-btn">Submit</a>
+                <div class="scroll-wrap">
+                    <div class="qa">
+                        <p><strong>Q&A game</strong> : is an amazing opportunity for the star to be in news and get great reviews with UC NEWS. This ensures high rankings in all popularity charts.</p>
+
+                        <p><strong>How to play</strong> : After purchasing the activity the star just needs to spend an hour on the Q&A game on that day by answering some interesting questions asked by the fans.</p>
+
+                        <p>When you take part in this activity you will see that high rankings in all popularity charts await you!</p>
+                    </div>
+                    <!--<img src="test.jpg?t=1503923882065" alt="">-->
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="{$style_path}/js/base.min.js?t=1503923882065"></script>
+<script>
+    var graph_data = {
+        series: [{
+            type: 'graph',
+            layout: 'force',
+            animation: true,
+            animationEasing:'cubicln',
+            animationDurationUpdate: function (idx) {
+                // 越往后的数据延迟越大
+                return idx * 100;
+            },
+            draggable:true,
+            data: [
+                {
+                    name: 'Long Leg',
+                    symbolSize: 130,
+                    itemStyle: {
+                        normal: {
+                            color: '#ffc63f'
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:true,
+                            color:'#060a10',
+                            fontSize:20,
+                            fontWeight:600
+                        }
+                    }
+                },
+                {
+                    name: 'Cute',
+                    symbolSize: 80,
+                    itemStyle: {
+                        normal: {
+                            color: '#06080d',
+                            borderColor:'#ffc63f',
+                            borderWidth:1
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:true,
+                            color:'#f0cc01',
+                            fontSize:18
+                        }
+                    }
+                },
+                {
+                    name: 'Young',
+                    symbolSize: 80,
+                    itemStyle: {
+                        normal: {
+                            color: '#06080d',
+                            borderColor:'#ffc63f',
+                            borderWidth:1
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:true,
+                            color:'#f0cc01',
+                            fontSize:18
+                        }
+                    }
+                },
+                {
+                    name: 'Beauty',
+
+                    symbolSize: 70,
+                    itemStyle: {
+                        normal: {
+                            color: '#06080d',
+                            borderColor:'#ffc63f',
+                            borderWidth:1
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:true,
+                            color:'#f0cc01',
+                            fontSize:14
+                        }
+                    }
+                },
+                {
+                    name: 'Good at cooking',
+                    symbolSize: 80,
+                    itemStyle: {
+                        normal: {
+                            color: '#06080d',
+                            borderColor:'#ffc63f',
+                            borderWidth:1
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:true,
+                            color:'#f0cc01',
+                            fontSize:14
+                        }
+                    }
+                },
+                {
+                    name: 'White',
+                    symbolSize: 50,
+                    itemStyle: {
+                        normal: {
+                            color: '#06080d',
+                            borderColor:'#ffc63f',
+                            borderWidth:1,
+                            opacity:.65
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:true,
+                            color:'#f0cc01',
+                            fontSize:14
+                        }
+                    }
+                },
+                {
+                    name: 'Rich',
+                    symbolSize: 50,
+                    itemStyle: {
+                        normal: {
+                            color: '#06080d',
+                            borderColor:'#ffc63f',
+                            borderWidth:1,
+                            opacity:.65
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:true,
+                            color:'#f0cc01',
+                            fontSize:14
+                        }
+                    }
+                }
+                ,
+                {
+                    name: 'Kind',
+                    symbolSize: 40,
+                    itemStyle: {
+                        normal: {
+                            color: '#06080d',
+                            borderColor:'#ffc63f',
+                            borderWidth:1,
+                            opacity:.65
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:true,
+                            color:'#f0cc01',
+                            fontSize:14
+                        }
+                    }
+                },
+                {
+                    name: 'Humorous',
+                    symbolSize: 55,
+                    itemStyle: {
+                        normal: {
+                            color: '#06080d',
+                            borderColor:'#ffc63f',
+                            borderWidth:1,
+                            opacity:.65
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:true,
+                            color:'#f0cc01',
+                            fontSize:14
+                        }
+                    }
+                }
+            ],
+            links:[
+                {
+                    source: 'Cute',
+                    target: 'Long Leg'
+                },
+                {
+                    source: 'Young',
+                    target: 'Long Leg'
+                },
+                {
+                    source: 'Young',
+                    target: 'Humorous'
+                },
+                {
+                    source: 'Young',
+                    target: 'Beauty'
+                },
+                {
+                    source: 'Beauty',
+                    target: 'Long Leg'
+                },
+                {
+                    source: 'Good at cooking',
+                    target: 'Beauty'
+                },
+                {
+                    source: 'Good at cooking',
+                    target: 'Long Leg'
+                },
+                {
+                    source: 'Good at cooking',
+                    target: 'White'
+                }
+                ,
+                {
+                    source: 'Rich',
+                    target: 'White'
+                }
+                ,
+                {
+                    source: 'Rich',
+                    target: 'Long Leg'
+                }
+                ,
+                {
+                    source: 'Kind',
+                    target: 'Long Leg'
+                }
+                ,
+                {
+                    source: 'Kind',
+                    target: 'Cute'
+                }
+                ,
+                {
+                    source: 'Kind',
+                    target: 'Humorous'
+                }
+                ,
+                {
+                    source: 'Kind',
+                    target: 'White'
+                }
+                ,
+                {
+                    source: 'Humorous',
+                    target: 'Long Leg'
+                }
+                ,
+                {
+                    source: 'Humorous',
+                    target: 'Cute'
+                }
+                ,
+                {
+                    source: 'White',
+                    target: 'Long Leg'
+                },
+                {
+                    source: 'Cute',
+                    target: 'Young'
+                }
+            ],
+            lineStyle:{
+                normal:{
+                    color:'#e6c301',
+                    width:1
+                }
+            },
+            force: {
+                initLayout: 'circular',
+                edgeLength: [10, 220],
+                repulsion: 300,
+                gravity: 0.1
+            }
+        }]
+    }
+    var line_data = [20000, 30000, 40000, 35000, 25000, 40000, 36000];
+    var line_data2 = [25000, 30000, 40000, 35000, 25000, 40000, 36000];
+    var line_data3 = [26000, 30000, 40000, 35000, 25000, 40000, 36000];
+    var pie1_data = [
+        {value:104567, name:'UC News'},
+        {value:131433, name:'other platform'}
+    ]
+    var pie2_data = [
+        {value:2527860, name:'UC campaign'},
+        {value:40987630, name:'we-media'},
+        {value:46583310, name:'other platform'}
+    ]
+</script>
+    <script src="{$style_path}/js/main.js?t=1503923882065"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49529907-5', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+{/literal}
+</html>
