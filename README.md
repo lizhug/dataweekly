@@ -2,7 +2,7 @@
 
 # pc端文字标签格式
 - 格式：
-```
+```javascript
 [["标签名",文字大小],["标签名",文字大小]...]
 ```
 
@@ -11,7 +11,7 @@
 # 圆形标签格式
 - 格式：
 
-```
+```javascript
 {
         series: [{
             type: 'graph',
@@ -65,7 +65,7 @@
 
 - 注意：pc端圆形大小最大为238，字体最大为46，font-weight如果不想加粗可以去掉；mobi端圆形大小最大为130，字体最大为20，``force``的数据也有所不同，如下：
 
-```
+```javascript
 force: {
                 initLayout: 'circular',
                 edgeLength: [10, 220],
@@ -78,14 +78,14 @@ force: {
 
 - 格式：
 
-```
+```javascript
 [数值,数值....]
 ```
 
 # 饼图数据
 - 格式：
 
-```
+```javascript
 [
         {value:数据1的值, name:'数据1的名'},
         {value:数据2的值, name:'数据2的名'}
