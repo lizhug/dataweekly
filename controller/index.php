@@ -43,6 +43,23 @@ class index extends engine {
         ));
     }
 
+    public function get_data_jsonp() {
+        $month = $_GET['month'];
+        $week = $_GET['week'];
+
+        $link = D();
+
+        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' LIMIT 1");
+
+        $row = mysqli_fetch_assoc($result);
+
+        echo $_GET['callback'] . '(' . json_encode(array(
+            "month" => $month,
+            "week" => $week,
+            "data" => $row
+        )) . ')';
+    }
+
     public function get_data_list() {
         $link = D();
 
@@ -55,6 +72,20 @@ class index extends engine {
         }
 
         echo json_encode($data);
+    }
+
+    public function get_data_list_jsonp() {
+        $link = D();
+
+        $result = $link->query("SELECT * FROM data");
+
+        $data = [];
+
+        while($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
+        }
+
+        echo $_GET['callback'] . '(' . json_encode($data) . ")";
     }
 
     public function submit_data() {
