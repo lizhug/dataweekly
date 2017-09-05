@@ -97,16 +97,12 @@ vm = new Vue({
 		initPage: ->
 			week = document.getElementById("data-week").value
 			month = document.getElementById("data-month").value
-			console.log month
 			
 			if month 
-				console.log 222
 				for item in this.list
 					console.log item['week'] == week, item['week'], item['month'], month, week
 					if item['month'] is month and item['week'] is week
 						this.data = item['data']
-
-						console.log item
 						break
 	mounted: ->
 		this.getDataList();

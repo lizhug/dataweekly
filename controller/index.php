@@ -22,7 +22,7 @@ class index extends engine {
             $smarty->display("mobi/_index.html");
         } else {
             $smarty->assign("style_path", "/templates/pc");
-            $smarty->display("pc/_indexv2.html");
+            $smarty->display("pc/_index.html");
         }   
     }
 
