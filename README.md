@@ -91,3 +91,24 @@ force: {
         {value:数据2的值, name:'数据2的名'}
     ]
 ```
+
+
+
+# 请求单个数据
+请求地址 /index.php?c=index&f=get_data
+请求类型 POST
+请求参数 
+    month 月份
+    week  星期
+
+返回格式  json
+返回值示例
+{"month":"August","week":"3th Week","data":{"id":"4","month":"August","week":"3th Week","data":"{\"month\":\"August\",\"week\":\"3th Week\",\"period\":\"21 August - 27 August\",\"name\":\"Sonam Kapoor\",\"image\":\"http:\/\/www.feizl.com\/upload2007\/2014_08\/14081217152228.jpg\",\"hotkey\":\"Long Leg|Cute|Young|Beauty|Rich|Kind|White\",\"article\":\"100000\",\"platform\":\"104567\",\"media\":\"131433\",\"social\":\"500\",\"uc\":\"2000\",\"engagement\":\"231231232\",\"euc\":\"1000\",\"emedia\":\"1000\",\"eother\":\"1000\",\"hotComment\":[{\"name\":\"David\",\"content\":\"fdfdfdafdsfdfdfdsafdfd\"},{\"name\":\"David2\",\"content\":\"3333fdfdfdafdsfdfdfdsafdfd\"},{\"name\":\"David5\",\"content\":\"3333fdfdfdafdsfdfdfdsafdfd\"}]}"}}
+
+# 请求数据列表
+请求地址 /index.php?c=index&f=get_data_list
+请求类型 POST
+请求参数   无
+返回格式  json
+返回值示例
+

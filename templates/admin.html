@@ -1,0 +1,73 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<div class="form-group">
+	<label>月份</label>
+	<input type="text" v-model="data.month" class="form-control" placeholder="August" />
+	<label>星期</label>
+	<input type="text" v-model="data.week" class="form-control" placeholder="August" />
+	<label>报告时间</label>
+	<input type="text" v-model="data.period" class="form-control" placeholder="August" />
+	<label>明星名字</label>
+	<input type="text" v-model="data.name" class="form-control" placeholder="August" />
+	<label>明星头像地址</label>
+	<input type="text" v-model="data.image" class="form-control" placeholder="August" />
+	<label>热门词（用|隔开）</label>
+	<input type="text" v-model="data.hotkey" class="form-control" placeholder="August" />
+	<label>文章数</label>
+	<input type="text" v-model="data.article" class="form-control" placeholder="August" />
+	<label>机构号</label>
+	<input type="text" v-model="data.platform" class="form-control" placeholder="August" />
+	<label>自媒体</label>
+	<input type="text" v-model="data.media" class="form-control" placeholder="August" />
+	<label>社媒体</label>
+	<input type="text" v-model="data.social" class="form-control" placeholder="August" />
+	<label>UC News</label>
+	<input type="text" v-model="data.uc" class="form-control" placeholder="August" />
+	<label>总互动数</label>
+	<input type="text" v-model="data.engagement" class="form-control" placeholder="August" />
+	<label>UC campaign</label>
+	<input type="text" v-model="data.euc" class="form-control" placeholder="August" />
+	<label>UC we-media</label>
+	<input type="text" v-model="data.emedia" class="form-control" placeholder="August" />
+	<label>UC other</label>
+	<input type="text" v-model="data.eother" class="form-control" placeholder="August" />
+	<label>热门舆论</label>
+	<table>
+		<tr><th>名字</th><th>内容</th><th>操作</th></tr>
+		<tr v-for="(item,index) in data.hotComment">
+			<td>
+				<input type="text" class="form-control" v-model="item.name" />
+			</td>
+			<td>
+				<input type="text" class="form-control" v-model="item.content" />
+			</td>
+			<td>
+				<span class="btn btn-primary btn-sm" @click="addComment">新增</span>
+				<span class="btn btn-danger btn-sm" @click="deleteComment(index)">删除</span>
+			</td>
+		</tr>
+	</table>
+	<span class="btn btn-primary" @click="submitData">提交</span>
+	<h2>数据列表，点击可进行更改</h2>
+	<ul>
+		{literal}
+		<li v-for="item in list">
+			<a :href="'index.php?c=index&f=admin&month=' + item.month + '&week=' + item.week">{{item.month}}/{{item.week}}</a>
+			<span class="btn btn-danger btn-sm" @click="deleteItem(item.id)">删除</span>
+		</li>
+		<li><a href="index.php?c=index&f=admin">新增</a></li>
+		{/literal}
+	</ul>
+	<input type="hidden" value="{$smarty.get.month}" id="data-month" />
+	<input type="hidden" value="{$smarty.get.week}" id="data-week" />
+</div>
+</div>
+<script type="text/javascript" src="/lib/vue.dev.js"></script>
+<script type="text/javascript" src="/lib/vue-resource.js"></script>
+<script type="text/javascript" src="/assets/js/admin.min.js"></script>
+</body>
+</html>
