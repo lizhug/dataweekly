@@ -8,7 +8,17 @@ vm = new Vue({
 			period: "21 August - 27 August"
 			name: "Sonam Kapoor"
 			image: "http://www.feizl.com/upload2007/2014_08/14081217152228.jpg"
-			hotkey: "Long Leg|Cute|Young|Beauty|Rich|Kind|White"
+			hotkey: [
+				[
+					"Long Leg", 10
+				]
+				[
+					"Cute", 10
+				]
+				[
+					"Long Leg 2", 10
+				]
+			]
 			article: "100000"
 			platform: "104567"
 			media: "131433"
@@ -22,14 +32,17 @@ vm = new Vue({
 				{
 					name: "David"
 					content: "fdfdfdafdsfdfdfdsafdfd"
+					like: 100
 				}
 				{
 					name: "David2"
 					content: "3333fdfdfdafdsfdfdfdsafdfd"
+					like: 100
 				}
-				{
+				{ 
 					name: "David3"
 					content: "3333fdfdfdafdsfdfdfdsafdfd"
+					like: 100
 				}
 			]
 	methods:
@@ -41,6 +54,11 @@ vm = new Vue({
 				name: "11"
 				content: "222"
 			}
+		deleteHotkey: (index) ->
+			this.data.hotkey.splice index, 1
+
+		addHotkey: ->
+			this.data.hotkey.push ['', '']
 		submitData: ->
 			this.$http.post(
 				"/index.php?c=index&f=submit_data"

@@ -16,7 +16,21 @@
 	<label>明星头像地址</label>
 	<input type="text" v-model="data.image" class="form-control" placeholder="August" />
 	<label>热门词（用|隔开）</label>
-	<input type="text" v-model="data.hotkey" class="form-control" placeholder="August" />
+	<table>
+		<tr><th>名字</th><th>大小</th><th>操作</th></tr>
+		<tr v-for="(item,index) in data.hotkey">
+			<td>
+				<input type="text" class="form-control" v-model="item[0]" />
+			</td>
+			<td>
+				<input type="text" class="form-control" v-model="item[1]" />
+			</td>
+			<td>
+				<span class="btn btn-primary btn-sm" @click="addHotkey">新增</span>
+				<span class="btn btn-danger btn-sm" @click="deleteHotkey(index)">删除</span>
+			</td>
+		</tr>
+	</table>
 	<label>文章数</label>
 	<input type="text" v-model="data.article" class="form-control" placeholder="August" />
 	<label>机构号</label>
@@ -37,13 +51,16 @@
 	<input type="text" v-model="data.eother" class="form-control" placeholder="August" />
 	<label>热门舆论</label>
 	<table>
-		<tr><th>名字</th><th>内容</th><th>操作</th></tr>
+		<tr><th>名字</th><th>内容</th><th>点赞</th><th>操作</th></tr>
 		<tr v-for="(item,index) in data.hotComment">
 			<td>
 				<input type="text" class="form-control" v-model="item.name" />
 			</td>
 			<td>
 				<input type="text" class="form-control" v-model="item.content" />
+			</td>
+			<td>
+				<input type="text" class="form-control" v-model="item.like" />
 			</td>
 			<td>
 				<span class="btn btn-primary btn-sm" @click="addComment">新增</span>
@@ -62,6 +79,8 @@
 		<li><a href="index.php?c=index&f=admin">新增</a></li>
 		{/literal}
 	</ul>
+	<label>折线数据点</label>
+	<input type="text" v-model="data.lineData" class="form-control" placeholder="August" />
 	<input type="hidden" value="{$smarty.get.month}" id="data-month" />
 	<input type="hidden" value="{$smarty.get.week}" id="data-week" />
 </div>
