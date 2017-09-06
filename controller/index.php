@@ -12,8 +12,11 @@ class index extends engine {
         $month = $_GET['month'];
         $week = $_GET['week'];
 
+        $random = mt_rand(10000, 99999);
+
         $smarty = new Smarty();
         $smarty->assign("id", $id);
+        $smarty->assign("random", $random);
 
         require_once APP_PATH . "engine/mobile_detect.php";
         $isMobile = (new MobileDetect)->isMobile();
