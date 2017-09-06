@@ -15,16 +15,14 @@
 	<input type="text" v-model="data.name" class="form-control" placeholder="August" />
 	<label>明星头像地址</label>
 	<input type="text" v-model="data.image" class="form-control" placeholder="August" />
-	<label>热门词（用|隔开）</label>
+	<label>热门词（从大到小排列）</label>
 	<table>
-		<tr><th>名字</th><th>大小</th><th>操作</th></tr>
+		<tr><th>名字</th><th>操作</th></tr>
 		<tr v-for="(item,index) in data.hotkey">
 			<td>
 				<input type="text" class="form-control" v-model="item[0]" />
 			</td>
-			<td>
-				<input type="text" class="form-control" v-model="item[1]" />
-			</td>
+			
 			<td>
 				<span class="btn btn-primary btn-sm" @click="addHotkey">新增</span>
 				<span class="btn btn-danger btn-sm" @click="deleteHotkey(index)">删除</span>
