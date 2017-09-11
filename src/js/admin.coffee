@@ -28,6 +28,8 @@ vm = new Vue({
 			euc: "1000"
 			emedia: "1000"
 			eother: "1000"
+			qa: "Q&A GAME"
+			qa_rule: "qa的规则介绍"
 			hotComment: [
 				{
 					name: "David"

@@ -47,6 +47,10 @@
 	<input type="text" v-model="data.emedia" class="form-control" placeholder="August" />
 	<label>UC other</label>
 	<input type="text" v-model="data.eother" class="form-control" placeholder="August" />
+	<label>Q&A 名字</label>
+	<input type="text" v-model="data.qa" class="form-control" placeholder="August" />
+	<label>Q&A 规则</label>
+	<input type="text" v-model="data.qa_rule" class="form-control" placeholder="August" />
 	<label>热门舆论</label>
 	<table>
 		<tr><th>名字</th><th>内容</th><th>点赞</th><th>操作</th></tr>
@@ -71,7 +75,8 @@
 	<ul>
 		{literal}
 		<li v-for="item in list">
-			<a :href="'index.php?c=index&f=admin&month=' + item.month + '&week=' + item.week">{{item.month}}/{{item.week}}</a>
+			<a :href="'index.php?c=index&f=admin&month=' + item.month + '&week=' + item.week">编辑 / </a>
+			<a :href="'index.php?c=index&f=home&month=' + item.month + '&week=' + item.week">前台链接访问 {{item.month}}/{{item.week}}</a>
 			<span class="btn btn-danger btn-sm" @click="deleteItem(item.id)">删除</span>
 		</li>
 		<li><a href="index.php?c=index&f=admin">新增</a></li>
