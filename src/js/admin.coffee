@@ -20,11 +20,13 @@ vm = new Vue({
 				]
 			]
 			article: "100000"
+			article_txt: "100000"
 			platform: "104567"
 			media: "131433"
 			social: "500"
 			uc: "2000"
 			engagement: "231231232"
+			engagement_txt: "231231232"
 			euc: "1000"
 			emedia: "1000"
 			eother: "1000"
