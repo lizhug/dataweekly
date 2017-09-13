@@ -11,6 +11,7 @@ class index extends engine {
 
         $month = $_GET['month'];
         $week = $_GET['week'];
+        $name = $_GET['name'];
 
         $random = mt_rand(10000, 99999);
 
@@ -32,16 +33,18 @@ class index extends engine {
     public function get_data() {
         $month = $_GET['month'];
         $week = $_GET['week'];
+        $name = $_GET['name'];
 
         $link = D();
 
-        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' LIMIT 1");
+        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' LIMIT 1");
 
         $row = mysqli_fetch_assoc($result);
 
         echo json_encode(array(
             "month" => $month,
             "week" => $week,
+            "name" => $name,
             "data" => $row
         ));
     }
@@ -49,16 +52,18 @@ class index extends engine {
     public function get_data_jsonp() {
         $month = $_GET['month'];
         $week = $_GET['week'];
+        $name = $_GET['name'];
 
         $link = D();
 
-        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' LIMIT 1");
+        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' LIMIT 1");
 
         $row = mysqli_fetch_assoc($result);
 
         echo $_GET['callback'] . '(' . json_encode(array(
             "month" => $month,
             "week" => $week,
+            "name" => $name,
             "data" => $row
         )) . ')';
     }
@@ -96,20 +101,21 @@ class index extends engine {
         
         $month = $data['month'];
         $week = $data['week'];
+        $name = $data['name'];
         $data2 = json_encode($data);
 
         $link = D();
 
-        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' LIMIT 1");
+        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' LIMIT 1");
         if (is_array(mysqli_fetch_assoc($result))) {
-           $result = $link->query("UPDATE data SET data= '" . $data2 . "' WHERE month = '" . $month . "' AND week = '" . $week . "'");
+           $result = $link->query("UPDATE data SET data= '" . $data2 . "' WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "'");
 
            echo json_encode(array(
                 "code" => "200",
                 "message" => "数据更新成功"
             ));
         } else {
-            $result = $link->query("INSERT INTO data(`month`, `week`, `data`) VALUES ('" . $month . "', '" . $week . "', '" . $data2 . "')");
+            $result = $link->query("INSERT INTO data(`month`, `week`, `name`, `data`) VALUES ('" . $month . "', '" . $week . "', '" . $name . "', '" . $data2 . "')");
 
             echo json_encode(array(
                 "code" => "200",
