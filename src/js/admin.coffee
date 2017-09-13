@@ -89,12 +89,8 @@ vm = new Vue({
 					emulateJSON: true
 				}
 			).then((res) ->
-				data = JSON.parse(res.body)
-
-				if data.code is "400"
-					alert data.message
-				else
-					alert data.message
+				alert "删除成功"
+				window.location.reload()
 			)
 
 		getDataList: ->

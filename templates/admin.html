@@ -77,8 +77,8 @@
 	<ul>
 		{literal}
 		<li v-for="item in list">
-			<a :href="'index.php?c=index&f=admin&month=' + item.month + '&week=' + item.week">编辑 / </a>
-			<a :href="'index.php?c=index&f=home&month=' + item.month + '&week=' + item.week">前台链接访问 {{item.month}}/{{item.week}}</a>
+			<a :href="'index.php?c=index&f=admin&month=' + item.month + '&week=' + item.week + '&name=' + item.name">编辑 / </a>
+			<a :href="'index.php?c=index&f=home&month=' + item.month + '&week=' + item.week + '&name=' + item.name">前台链接访问 {{item.month}}/{{item.week}}/{{item.name}}</a>
 			<span class="btn btn-danger btn-sm" @click="deleteItem(item.id)">删除</span>
 		</li>
 		<li><a href="index.php?c=index&f=admin">新增</a></li>

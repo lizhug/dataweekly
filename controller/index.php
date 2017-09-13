@@ -82,6 +82,16 @@ class index extends engine {
         echo json_encode($data);
     }
 
+    public function delete_data() {
+        $link = D();
+
+        $id = $_POST['id'];
+
+        $link->query("DELETE FROM data WHERE id = " . $id);
+
+        echo json_encode(1);
+    }
+
     public function get_data_list_jsonp() {
         $link = D();
 
