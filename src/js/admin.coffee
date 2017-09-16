@@ -33,6 +33,7 @@ vm = new Vue({
 			qa: "Q&A GAME"
 			qa_rule: "qa的规则介绍"
 			qa_image: "qa图片"
+			qa_btn: "qa按钮"
 			hotComment: [
 				{
 					name: "David"
