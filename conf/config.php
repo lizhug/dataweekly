@@ -1,7 +1,7 @@
 <?php
 
 return array(
-     "db_host" => "45.79.97.100",		//35.154.36.56
+     "db_host" => "119.23.162.116",		//35.154.36.56
      "db_name" => "dataweekly",
      "db_user" => "dataweekly",
      "db_password" => "12345678"
