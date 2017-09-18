@@ -15,7 +15,7 @@ $(function() {
         var graph_data = {
             series: [{
                 type: 'graph',
-                layout: 'force',
+                //layout: 'force',
                 animation: true,
                 animationEasing:'cubicln',
                 animationDurationUpdate: function (idx) {
@@ -24,7 +24,9 @@ $(function() {
                 },
                 data: [
                     {
-
+                        x:330,
+                        y:317,
+                        fixed:true,
                         symbolSize: 238,
                         itemStyle: {
                             normal: {
@@ -41,7 +43,8 @@ $(function() {
                         }
                     },
                     {
-
+                        x:175+75,
+                        y:175+75,
                         symbolSize: 175,
                         itemStyle: {
                             normal: {
@@ -59,7 +62,8 @@ $(function() {
                         }
                     },
                     {
-
+                        x:660-164-70,
+                        y:260,
                         symbolSize: 164,
                         itemStyle: {
                             normal: {
@@ -78,7 +82,8 @@ $(function() {
                     },
                     {
 
-
+                        x:228,
+                        y:634-128-50-100,
                         symbolSize: 128,
                         itemStyle: {
                             normal: {
@@ -96,8 +101,9 @@ $(function() {
                         }
                     },
                     {
-
-                        symbolSize: 142,
+                        x:660-142-50-0,
+                        y:634-142-50-50,
+                        symbolSize: 130,
                         itemStyle: {
                             normal: {
                                 color: '#06080d',
@@ -178,10 +184,10 @@ $(function() {
                     for(var l in o_data.hotkey){
                         graph_data.series[0].data[l].name = o_data.hotkey[l][0];
                         nameArr.push( o_data.hotkey[l][0]);
-                        // graph_data.series[0].links.push({
-                        //     source: o_data.hotkey[l][0],
-                        //     target: o_data.hotkey[0][0]
-                        // })
+                        graph_data.series[0].links.push({
+                            source: o_data.hotkey[l][0],
+                            target: o_data.hotkey[0][0]
+                        })
                         // if(l>0){
                         //     graph_data.series[0].links.push({
                         //         source: o_data.hotkey[l-1][0],
@@ -189,13 +195,13 @@ $(function() {
                         //     })
                         // }
                     }
-                    var tempArr = groupSplit(nameArr,2);
-                    for(var y in tempArr){
-                        graph_data.series[0].links.push({
-                            source: tempArr[y][0],
-                            target: tempArr[y][1]
-                        })
-                    }
+                    // var tempArr = groupSplit(nameArr,2);
+                    // for(var y in tempArr){
+                    //     graph_data.series[0].links.push({
+                    //         source: tempArr[y][0],
+                    //         target: tempArr[y][1]
+                    //     })
+                    // }
                 }
             })
 
@@ -291,11 +297,20 @@ $(function() {
                     if(swiper.activeIndex == 1){
                         var graph_chart = echarts.init(document.getElementById("graph"));
                         var graph_data1 = {grid: {left: "16%", top: 10, right: "5%", bottom: 25}};
-                        graph_chart.setOption(Object.assign(graph_data1,graph_data));
+                        var graph_data2= Object.assign(graph_data1,graph_data);
+                        graph_chart.setOption(graph_data2);
                         // graph_inter = setInterval(function () {
-                        //     var t = parseInt(100 * Math.random() + 260);
-                        //     graph_chart.setOption({force: {repulsion: t}})
-                        // },600)
+                        //     graph_chart.setOption({
+                        //         series: [{
+                        //             data: [
+                        //                 {
+                        //                     x:graph_data.series[0].data[0].x+10
+                        //                 }
+                        //             ]
+                        //         }]
+                        //     })
+                        // },1000)
+
                     }
                     if(swiper.activeIndex == 2){
                         var pie1 = echarts.init(document.getElementById('pie1'));
