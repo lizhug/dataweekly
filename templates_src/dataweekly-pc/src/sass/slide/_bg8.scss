@@ -58,11 +58,15 @@
   margin-left:40px;
   img{
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 }
-.qa{
+.qa-wrap{
   height: 437-100px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.qa{
   background: rgba(17, 18, 24, 0.65);
   border:1px solid rgba(70, 91, 185, 0.33);
   padding: 50px 28px;
@@ -72,8 +76,6 @@
   text-align: left;
   box-sizing: border-box;
   width: 100%;
-  overflow: hidden;
-  overflow-y: scroll;
   .qa-text{
     white-space: normal;
     word-break: break-all;
