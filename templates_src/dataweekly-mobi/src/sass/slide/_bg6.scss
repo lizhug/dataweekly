@@ -1,0 +1,79 @@
+
+.bg6{
+  @extend %bg6;
+  text-align: center;
+  background-size:100% 100%;
+  box-sizing: border-box;
+  padding-top: 3.3rem;
+  .btn{
+    display: inline-block!important;
+    height: .57rem;
+    line-height: 2.5;
+    padding:0 .23rem;
+    background: #ffc63f;
+    color: #000;
+    @include font-dpr(22px);
+    text-align: center;
+    margin: 0 auto;
+    z-index: 99;
+    position: relative;
+    top:85%;
+  }
+}
+.bg6-logo{
+  @extend %bg6-logo;
+  position: absolute;
+  left:50%;
+  top:2.4rem;
+  transform: translate3d(-50%,0,0);
+  z-index: 99;
+  text-indent:-999em;
+}
+.bg6-col{
+  width: 6.85rem;
+  box-sizing: border-box;
+  background: rgba(17, 18, 24, 0.65);
+  border:.01rem solid rgba(70, 91, 185, 0.33);
+  margin: 0 auto .2rem;
+  text-align: left;
+  overflow: hidden;
+  h4{
+    color: #ffc63f;
+    @include font-dpr(25px);
+    margin-bottom:.10rem;
+    line-height: 1;
+  }
+  p{
+    color: #5a667a;
+    @include font-dpr(19px);
+    line-height: 1.2;
+  }
+  padding:.15rem .22rem;
+  position: relative;
+  z-index: 100;
+  .zan{
+    color: #5f6b7c;
+    @include font-dpr(14px);
+    position: absolute;
+    right:.16rem;
+    top:.22rem;
+    i{
+      display: inline-block;
+      vertical-align: -.02rem;
+      @extend %zan;
+      margin-right:.06rem;
+    }
+  }
+}
+.bg6-sub-page{
+  @extend %bg6;
+  text-align: center;
+  background-size:100% 100%;
+  box-sizing: border-box;
+  padding-top: 2.42rem;
+}
+.scroll-wrap{
+  height: 9.1rem;
+  overflow: hidden;
+  overflow-y:scroll;
+}

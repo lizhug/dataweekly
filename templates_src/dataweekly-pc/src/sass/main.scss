@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+@import "base/base";
+@import "img";
+@import "lib/animate";
+@import "lib/swiper";
+
+body {
+    font: $b-font-weight #{$b-font-size}/#{$b-line-height} $b-font-family;
+    color: $c-text;
+    a {
+        text-decoration: none;
+        color: nth($c-link, 1);
+        &:hover {
+            //text-decoration: underline;
+        }
+    }
+}
+@mixin toppercent($t){
+    top:($t/1080)*100%;
+}
+a{
+    cursor:pointer;
+}
+body,html{
+    position: relative;
+    height: 100%;
+}
+// Coding...
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.main{
+    width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+@import "slide/bg1";
+@import "slide/bg2";
+@import "slide/bg3";
+@import "slide/bg4";
+@import "slide/bg5";
+@import "slide/bg6";
+@import "slide/bg7";
+@import "slide/bg8";
+.logo{
+    @extend %logo;
+    position: absolute;
+    left:50%;
+    @include toppercent(60);
+    margin-left:-134px;
+    text-indent:-999em;
+    z-index: 99;
+}
+.share{
+    @extend %share;
+    position: absolute;
+    @include toppercent(22);
+    right:0;
+    z-index: 999;
+    cursor:pointer;
+}
+.slide{
+    @extend %slide;
+    position: absolute;
+    left:50%;
+    bottom:36/1080%;
+    margin-left:-44px;
+    text-indent:-999em;
+    animation: slide-down 1s infinite linear;
+}
+@keyframes slide-down {
+     0%{ bottom:36px;}
+     50%{ bottom:42px;}
+     100%{ bottom:36px;}
+ }
+.intro{
+    position: absolute;
+    width: 100%;
+    height: 82px;
+    line-height: 82px;
+    text-align: center;
+    color: #8593aa;
+    font-size: 18px;
+    background: #0e1016;
+    border:1px solid #243158;
+    span{
+        color: #ffc63f;
+        font-weight: 600;
+    }
+}
+.btn{
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    color: #070a0f;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 auto;
+    background: #ffc63f;
+    padding: 0 12px;
+}
+.sub-page{
+    display: none;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    @extend .animated;
+    @extend .fadeInDown;
+}
+.sub-page-on{
+    display: block;
+}
+.back{
+    @extend %back;
+    position: absolute;
+    left:0;
+    @include toppercent(22);
+}
+@import "media";
