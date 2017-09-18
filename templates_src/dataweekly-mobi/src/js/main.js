@@ -280,7 +280,7 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                     $('.bg7-sub-page h2').html(o_data.qa);
                     $('.bg7-sub-page .qa').html(o_data.qa_rule);
                     $('.bg7-sub-page img').attr('src',o_data.qa_image);
-                    $('.bg7-btn').text(o_data.qa_btn)
+                    $('.bg7-sub-btn').text(o_data.qa_btn)
 
                     //饼图
                     $('#art-num').text(o_data.article)
