@@ -86,7 +86,7 @@ $(function() {
 
                         x:228,
                         y:634-128-50-100,
-                        symbolSize: 128,
+                        symbolSize: 115,
                         itemStyle: {
                             normal: {
                                 color: '#06080d',
@@ -103,9 +103,9 @@ $(function() {
                         }
                     },
                     {
-                        x:660-142-50-0,
+                        x:660-142-50,
                         y:634-142-50-50,
-                        symbolSize: 130,
+                        symbolSize: 110,
                         itemStyle: {
                             normal: {
                                 color: '#06080d',
