@@ -32,10 +32,12 @@
   }
 }
 #graph{
-  width: 100%;
+  width: 95%;
   height: 6.67rem;
   position: absolute;
   top:3.9rem;
+  left:50%;
+  transform: translate(-50%,0);
 }
 .bg2-sub-page{
 

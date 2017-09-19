@@ -18,7 +18,7 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
         var graph_data = {
             series: [{
                 type: 'graph',
-                layout: 'force',
+                layout: 'none',
                 animation: true,
                 animationEasing:'cubicln',
                 animationDurationUpdate: function (idx) {
@@ -27,6 +27,9 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                 },
                 data: [
                     {
+                        x:window.innerWidth/2,
+                        y:184,
+                        fixed:true,
                         symbolSize: 130,
                         itemStyle: {
                             normal: {
@@ -43,6 +46,8 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                         }
                     },
                     {
+                        x:window.innerWidth/2-80,
+                        y:104,
                         symbolSize: 80,
                         itemStyle: {
                             normal: {
@@ -60,6 +65,8 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                         }
                     },
                     {
+                        x:window.innerWidth/2+80,
+                        y:94,
                         symbolSize: 80,
                         itemStyle: {
                             normal: {
@@ -77,6 +84,8 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                         }
                     },
                     {
+                        x:window.innerWidth/2-100,
+                        y:250,
                         symbolSize: 70,
                         itemStyle: {
                             normal: {
@@ -94,8 +103,9 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                         }
                     },
                     {
-
-                        symbolSize: 80,
+                        x:window.innerWidth/2+100,
+                        y:220,
+                        symbolSize: 70,
                         itemStyle: {
                             normal: {
                                 color: '#06080d',
@@ -113,7 +123,6 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                     },
                 ],
                 links:[
-
                 ],
                 lineStyle:{
                     normal:{
@@ -311,10 +320,10 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                     for(var l in o_data.hotkey){
                         graph_data.series[0].data[l].name = o_data.hotkey[l][0];
                         nameArr.push( o_data.hotkey[l][0]);
-                        // graph_data.series[0].links.push({
-                        //     source: o_data.hotkey[l][0],
-                        //     target: o_data.hotkey[0][0]
-                        // })
+                        graph_data.series[0].links.push({
+                            source: o_data.hotkey[l][0],
+                            target: o_data.hotkey[0][0]
+                        })
                         // if(l>0){
                         //     graph_data.series[0].links.push({
                         //         source: o_data.hotkey[l-1][0],
@@ -322,13 +331,13 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                         //     })
                         // }
                     }
-                    var tempArr = groupSplit(nameArr,2);
-                    for(var y in tempArr){
-                        graph_data.series[0].links.push({
-                            source: tempArr[y][0],
-                            target: tempArr[y][1]
-                        })
-                    }
+                    // var tempArr = groupSplit(nameArr,2);
+                    // for(var y in tempArr){
+                    //     graph_data.series[0].links.push({
+                    //         source: tempArr[y][0],
+                    //         target: tempArr[y][1]
+                    //     })
+                    // }
 
 
                 }
@@ -384,14 +393,14 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                             }
                         }
                         graph.setOption(Object.assign(graph_ori_data,graph_data));
-                        graph_ani = setInterval(function () {
-                            var num = parseInt(Math.random()*(300-200)+200);
-                            graph.setOption({
-                                force: {
-                                    repulsion: num
-                                }
-                            })
-                        },500)
+                        // graph_ani = setInterval(function () {
+                        //     var num = parseInt(Math.random()*(300-200)+200);
+                        //     graph.setOption({
+                        //         force: {
+                        //             repulsion: num
+                        //         }
+                        //     })
+                        // },500)
                     }
                     // if(swiper.activeIndex == 2){
                     //     var chart1 = echarts.init(document.getElementById('echart1'));
