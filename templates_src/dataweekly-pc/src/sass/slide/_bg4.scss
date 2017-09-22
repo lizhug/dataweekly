@@ -53,6 +53,11 @@
     @extend %circle1;
   }
 }
+.in .chart-pie1{
+  .chart-pie-title{
+    @extend %slice-ind-bg4-logo1.png
+  }
+}
 .chart-pie2{
   right:0;
   .chart-pie-title{
@@ -66,7 +71,9 @@
     @extend %circle2;
   }
 }
-
+.in .char-pie2{
+  @extend %bg4-logo2-in;
+}
 @media only screen and (max-width: 1440px) {
   .bg4{
     .chart-pie .chart-pie-wrap{

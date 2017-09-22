@@ -16,6 +16,9 @@
   margin-left:-373px;
   @include toppercent(220)
 }
+.in .bg7-logo{
+  @extend %slice-ind-bg7-logo.png;
+}
 .bg7-col-wrap{
   margin-left:80px;
   padding-top:335px;
@@ -57,6 +60,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 1440px) {
   .bg7-col-wrap{
     padding-top:280px;
@@ -78,9 +82,4 @@
       }
     }
   }
-}
-
-
-@media only screen and (min-width: 1280px) {
-
 }
