@@ -29,6 +29,11 @@
   z-index: 99;
   text-indent:-999em;
 }
+.in{
+  .bg6-logo{
+    @extend %ind-bg6-logo.png;
+  }
+}
 .bg6-col{
   width: 6.85rem;
   box-sizing: border-box;

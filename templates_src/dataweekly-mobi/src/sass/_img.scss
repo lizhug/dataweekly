@@ -1,4 +1,20 @@
 // -----------------------------------------------
+%bg1-logo-bg {
+	width: 7.2rem;
+	height: 2.99rem;
+	background-image: url('../img/bg1-logo-bg.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg1-logo-bg.png {
+	width: 7.2rem;
+	height: 2.99rem;
+	background-image: url('../img/bg1-logo-bg.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
 %back {
 	width: 0.43rem;
 	height: 0.43rem;
@@ -15,17 +31,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg1-logo-bg {
+%bg1 {
 	width: 7.2rem;
-	height: 2.99rem;
-	background-image: url('../img/bg1-logo-bg.png');
+	height: 12.8rem;
+	background-image: url('../img/bg1.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg1-logo-bg.png {
+%bg1.jpg {
 	width: 7.2rem;
-	height: 2.99rem;
-	background-image: url('../img/bg1-logo-bg.png');
+	height: 12.8rem;
+	background-image: url('../img/bg1.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -63,22 +79,6 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg1 {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/bg1.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg1.jpg {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/bg1.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %bg3-btn1-hov {
 	width: 3.44rem;
 	height: 2.33rem;
@@ -95,22 +95,6 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg3-btn2-hov {
-	width: 2.01rem;
-	height: 2.27rem;
-	background-image: url('../img/bg3-btn2-hov.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg3-btn2-hov.png {
-	width: 2.01rem;
-	height: 2.27rem;
-	background-image: url('../img/bg3-btn2-hov.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %bg3-btn1 {
 	width: 1.99rem;
 	height: 0.51rem;
@@ -122,6 +106,22 @@
 	width: 1.99rem;
 	height: 0.51rem;
 	background-image: url('../img/bg3-btn1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%bg3-btn2-hov {
+	width: 2.01rem;
+	height: 2.27rem;
+	background-image: url('../img/bg3-btn2-hov.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg3-btn2-hov.png {
+	width: 2.01rem;
+	height: 2.27rem;
+	background-image: url('../img/bg3-btn2-hov.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -351,22 +351,6 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg5-c {
-	width: 4rem;
-	height: 3.99rem;
-	background-image: url('../img/bg5-c.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg5-c.png {
-	width: 4rem;
-	height: 3.99rem;
-	background-image: url('../img/bg5-c.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %bg4 {
 	width: 7.2rem;
 	height: 12.8rem;
@@ -383,17 +367,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg5-tab-hov {
-	width: 2.79rem;
-	height: 0.51rem;
-	background-image: url('../img/bg5-tab-hov.png');
+%bg5-c {
+	width: 4rem;
+	height: 3.99rem;
+	background-image: url('../img/bg5-c.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg5-tab-hov.png {
-	width: 2.79rem;
-	height: 0.51rem;
-	background-image: url('../img/bg5-tab-hov.png');
+%bg5-c.png {
+	width: 4rem;
+	height: 3.99rem;
+	background-image: url('../img/bg5-c.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -410,6 +394,22 @@
 	width: 4rem;
 	height: 3.99rem;
 	background-image: url('../img/bg5-c2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%bg5-tab-hov {
+	width: 2.79rem;
+	height: 0.51rem;
+	background-image: url('../img/bg5-tab-hov.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg5-tab-hov.png {
+	width: 2.79rem;
+	height: 0.51rem;
+	background-image: url('../img/bg5-tab-hov.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -511,22 +511,6 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%c2 {
-	width: 3.07rem;
-	height: 3.05rem;
-	background-image: url('../img/c2.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%c2.png {
-	width: 3.07rem;
-	height: 3.05rem;
-	background-image: url('../img/c2.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %c1 {
 	width: 2.66rem;
 	height: 2.66rem;
@@ -538,6 +522,22 @@
 	width: 2.66rem;
 	height: 2.66rem;
 	background-image: url('../img/c1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%c2 {
+	width: 3.07rem;
+	height: 3.05rem;
+	background-image: url('../img/c2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%c2.png {
+	width: 3.07rem;
+	height: 3.05rem;
+	background-image: url('../img/c2.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -575,22 +575,6 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg1-logo {
-	width: 4.68rem;
-	height: 0.62rem;
-	background-image: url('../img/ind/bg1-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%ind-bg1-logo.png {
-	width: 4.68rem;
-	height: 0.62rem;
-	background-image: url('../img/ind/bg1-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %footer {
 	width: 7.2rem;
 	height: 5.92rem;
@@ -607,17 +591,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%line2 {
-	width: 2.25rem;
-	height: 2.32rem;
-	background-image: url('../img/line2.png');
+%bg1-logo {
+	width: 4.68rem;
+	height: 0.62rem;
+	background-image: url('../img/ind/bg1-logo.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%line2.png {
-	width: 2.25rem;
-	height: 2.32rem;
-	background-image: url('../img/line2.png');
+%ind-bg1-logo.png {
+	width: 4.68rem;
+	height: 0.62rem;
+	background-image: url('../img/ind/bg1-logo.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -655,6 +639,22 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
+%line2 {
+	width: 2.25rem;
+	height: 2.32rem;
+	background-image: url('../img/line2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%line2.png {
+	width: 2.25rem;
+	height: 2.32rem;
+	background-image: url('../img/line2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
 %loading-line {
 	width: 7.2rem;
 	height: 1.85rem;
@@ -671,22 +671,6 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%logo {
-	width: 2.68rem;
-	height: 0.88rem;
-	background-image: url('../img/logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%logo.png {
-	width: 2.68rem;
-	height: 0.88rem;
-	background-image: url('../img/logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %loading {
 	width: 7.2rem;
 	height: 12.8rem;
@@ -698,6 +682,22 @@
 	width: 7.2rem;
 	height: 12.8rem;
 	background-image: url('../img/loading.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%logo {
+	width: 2.68rem;
+	height: 0.88rem;
+	background-image: url('../img/logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%logo.png {
+	width: 2.68rem;
+	height: 0.88rem;
+	background-image: url('../img/logo.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }

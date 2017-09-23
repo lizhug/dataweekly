@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="in">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>UC Star</title>
+    <meta name="description" content="">
+    <meta name="front-end" content="MrF">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="in">
+<div class="loading">
+    <div class="logo">UC News</div>
+    <p id="loading-num">0%</p>
+    <canvas id="loading-line"></canvas>
+</div>
+<div class="swiper-container" id="swiper">
+    <div class="swiper-wrapper">
+
+        <section class="swiper-slide bg1">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">UC News</div>
+            <div class="sub-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".4s">Data comes from UC News</div>
+            <div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".6s"></div>
+            <div class="bg1-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".8s">UC Star</div>
+            <div class="bg1-title ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s">August 4th Week Report<br><span>21 August - 27 August</span></div>
+            <div class="circle c1 ani"></div>
+            <div class="circle c2 ani"></div>
+            <div class="circle c3 ani"></div>
+            <div class="ani line1"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s"></div>
+            <div class="ani line2" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.2s"></div>
+            <div class="circle-line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.4s">></div>
+            <p class="actor-name ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.6s"></p>
+            <img src="" alt="" class="actor-img ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.4s">
+            <a class="share"></a>
+            <div class="slide"></div>
+        </section>
+
+        <section class="swiper-slide bg2">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>
+            <div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s"></div>
+            <div class="bg2-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">Hot Key Word</div>
+            <a class="btn ani bg2-btn"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s" open-page="bg2-sub-page">Lihat riwayat</a>
+            <a class="share"></a>
+            <div class="slide"></div>
+            <div class="echart ani" id="graph" open-page="bg2-sub-page"></div>
+
+            <!--子页面-->
+            <div class="bg2-sub-page sub-page">
+                <a class="back bg2-back"></a>
+                <div class="logo">UC News</div>
+                <div class="history-wrap"></div>
+            </div>
+        </section>
+
+        <!--<section class="swiper-slide bg3">-->
+            <!--<div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>-->
+            <!--<div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s"></div>-->
+            <!--<div class="bg3-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">Tier of Popularity Index</div>-->
+            <!--<a class="ques btn ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.4s" open-page="bg3-sub-page"></a>-->
+
+            <!--<div class="bg3-tab-con ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">-->
+                <!--<div class="echart-line" id="echart1" ></div>-->
+                <!--<div class="bg3-chart-intro">popularity index {120}<i></i>popularity index {150}</div>-->
+                <!--<blockquote>You are quite hot now with raised  index</blockquote>-->
+            <!--</div>-->
+            <!--<div class="bg3-tab-con hide">-->
+                <!--<div class="echart-line" id="echart2" ></div>-->
+                <!--<div class="bg3-chart-intro" >popularity index {120}<i></i>popularity index {150}</div>-->
+                <!--<blockquote>You are quite hot now with raised  index</blockquote>-->
+            <!--</div>-->
+            <!--<div class="bg3-tab-con hide">-->
+                <!--<div class="echart-line" id="echart3" ></div>-->
+                <!--<div class="bg3-chart-intro">popularity index {120}<i></i>popularity index {150}</div>-->
+                <!--<blockquote >You are quite hot now with raised  index</blockquote>-->
+            <!--</div>-->
+
+            <!--<a class="share"></a>-->
+            <!--<div class="slide"></div>-->
+            <!--<a class="bg3-btn ani  bg3-btn1 bg3-btn-on" data-open="0" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s"></a>-->
+            <!--<a class="bg3-btn ani  bg3-btn2"  data-open="1" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s"></a>-->
+            <!--<a class="bg3-btn ani  bg3-btn3"  data-open="2" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="2.2s"></a>-->
+
+            <!--&lt;!&ndash;子页面&ndash;&gt;-->
+            <!--<div class="bg3-sub-page sub-page">-->
+                <!--<a class="back"></a>-->
+                <!--<div class="logo">UC News</div>-->
+                <!--<h2>How to get the index</h2>-->
+                <!--<h3>Author: UC News</h3>-->
+                <!--<section class="bg3-col">-->
+                    <!--<h4>Title</h4>-->
+                    <!--<p>For positive news, reviews and higher rankings, take part in the activities recommended by UC News.</p>-->
+                <!--</section>-->
+                <!--<section class="bg3-col">-->
+                    <!--<h4>Title</h4>-->
+                    <!--<p>For positive news, reviews and higher rankings, take part in the activities recommended by UC News.</p>-->
+                <!--</section>-->
+                <!--<section class="bg3-col">-->
+                    <!--<h4>Title</h4>-->
+                    <!--<p>For positive news, reviews and higher rankings, take part in the activities recommended by UC News.</p>-->
+                <!--</section>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <!--<section class="swiper-slide bg4">-->
+            <!--<div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>-->
+            <!--<div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"></div>-->
+            <!--<div class="bg4-logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">Ranking list for this week</div>-->
+            <!--<div class="bg4-icon ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s"></div>-->
+            <!--<div class="ani bg4-line bg4-line1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.8s"></div>-->
+            <!--<div class="ani bg4-line bg4-line2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.6s"></div>-->
+            <!--<div class="ani bg4-line bg4-line3" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.4s"></div>-->
+            <!--<div class="ani bg4-line bg4-line4" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.2s"></div>-->
+            <!--<div class="ani bg4-line bg4-line5" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s"></div>-->
+            <!--<div class="ani bg4-line bg4-line6" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s"></div>-->
+            <!--<a class="share"></a>-->
+            <!--<div class="slide"></div>-->
+            <!--<div class="data-col data-col1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.8s"><span class="data1">29</span><span class="data2">Anushkar</span><span class="data3">160</span><div class="data-col-title">No.<span>Name</span>Index</div></div>-->
+            <!--<div class="data-col data-col2 data-col-cur ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.4s"><span class="data1">30</span><span class="data2">Anushkar</span><span class="data3">160</span></div>-->
+            <!--<div class="data-col data-col3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.2s"><span class="data1">30</span><span class="data2">Anushkar</span><span class="data3">160</span></div>-->
+            <!--<div class="data-col data-col4 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s"><span class="data1">30</span><span class="data2">Anushkar</span><span class="data3">160</span></div>-->
+
+            <!--<div class="bg4-chart-intro ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">Position: 35<i></i>Slipped by 1 position</div>-->
+        <!--</section>-->
+
+        <section class="swiper-slide bg5">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>
+            <div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".8s"></div>
+            <div class="bg5-tab bg5-tab-on bg5-btn1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s">Artikel</div>
+            <div class="bg5-tab bg5-btn2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">Interaksi</div>
+            <div class="tab-cont tab-cont1">
+                <h2 class="ani"  swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.4s">Total articles : <span id="art-num"></span></h2>
+                <blockquote class="ani"  swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s" id="article_txt"></blockquote>
+                <div class="echart-pie"><div id="echart4" class="pie"></div></div>
+            </div>
+            <a class="share"></a>
+            <div class="slide"></div>
+            <div class="tab-cont tab-cont2 hide">
+                <h2>Total articles : <span id="eng-num"></span></h2>
+                <blockquote id="engagement_txt"></blockquote>
+                <div class="echart-pie"><div id="echart5" class="pie"></div></div>
+            </div>
+
+        </section>
+
+        <section class="swiper-slide bg6">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>
+            <div class="bg1-logo-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"></div>
+            <div class="bg6-logo ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">Hot comments</div>
+            <div class="bg6-col-wrap"></div>
+            <a class="share"></a>
+            <div class="slide"></div>
+            <a class="btn ani bg6-btn"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.8s" open-page="bg6-sub-page">MORE</a>
+
+            <!--子页面-->
+            <div class="bg6-sub-page sub-page">
+                <a class="back bg6-back"></a>
+                <div class="logo">UC News</div>
+                <div class="scroll-wrap">
+                    <div class="bg6-col-wrap"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="swiper-slide bg7">
+            <div class="logo ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">UC News</div>
+            <div class="slide2"></div>
+            <div class="bg7-intro ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".8s">
+                Thank you for reading this report.<br>
+                To get more fans and popularity , you are recommened to take part in the campaign which is exclusive for you.
+            </div>
+            <a class="bg7-btn btn ani bg7-sub-btn" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s" open-page="bg7-sub-page">Click to  book the {Q&A GAME}</a><a class="bg7-btn share-btn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">Share</a>
+            <a class="share"></a>
+
+            <!--子页面-->
+            <div class="bg7-sub-page sub-page">
+                <a class="back bg7-back"></a>
+                <div class="logo">UC News</div>
+                <h2>Q&A game</h2>
+                <dl>
+                    <dt>Time</dt>
+                    <dd><input type="text"></dd>
+                </dl>
+                <a class="sub-btn">Submit</a>
+                <div class="scroll-wrap">
+                    <div class="qa">
+                        <p><strong>Q&A game</strong> : is an amazing opportunity for the star to be in news and get great reviews with UC NEWS. This ensures high rankings in all popularity charts.</p>
+
+                        <p><strong>How to play</strong> : After purchasing the activity, the star just needs to spend an hour on the Q&A game on that day by answering some interesting questions asked by the fans.</p>
+
+                        <p>When you take part in this activity, you will see that high rankings in all popularity charts await you!</p>
+                    </div>
+                    <img src="img/footer.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- @bundle ./js/base.min.js -->
+<script src="./assets/echarts.min.js"></script>
+<script src="./assets/swiper.min.js"></script>
+<!-- @endbundle -->
+<script>
+
+    var line_data = [20000, 30000, 40000, 35000, 25000, 40000, 36000];
+    var line_data2 = [25000, 30000, 40000, 35000, 25000, 40000, 36000];
+    var line_data3 = [26000, 30000, 40000, 35000, 25000, 40000, 36000];
+
+</script>
+    <script src="./js/main.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49529907-5', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

@@ -25,6 +25,7 @@
   transform: translate3d(-50%,0,0);
   z-index:99;
 }
+
 .bg1-logo-bg{
   @extend %bg1-logo-bg;
   position: absolute;
@@ -32,6 +33,11 @@
   top:1.36rem;
   transform: translate3d(-50%,0,0);
   z-index: 80;
+}
+.in{
+  .bg1-logo-bg{
+    @extend %ind-bg1-logo.png;
+    }
 }
 .bg1-logo{
   @extend %bg1-logo;
