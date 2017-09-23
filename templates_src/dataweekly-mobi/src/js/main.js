@@ -144,6 +144,7 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
         var mySwiper,graph_ani, month = getUrlParams('month'),
             week = getUrlParams('week'),
             name = getUrlParams('name'),
+            lang = getUrlParams('lang') || "en",
             loaded = 0,
             total = 0,
             o_data;
@@ -277,10 +278,15 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
         initData= function () {
             var nameArr =[];
             $.ajax({
-                url:'http://dataweekly.z1025.com/index.php?c=index&f=get_data_jsonp&month='+month+'&week='+week+'&name='+name,
+                url:'http://dataweekly.z1025.com/index.php?c=index&f=get_data_jsonp&month='+month+'&week='+week+'&name='+name+'&lang='+lang,
                 dataType:'jsonp',
                 type:'POST',
                 success:function (data) {
+                    if(lang == 'id'){
+                        $('html').attr('lang','id')
+                        $('body').addClass('in')
+                    }
+
                     o_data = JSON.parse(data.data.data);
                     $('.actor-img').attr('src',o_data.image);
                     $('.actor-name').text(o_data.name);

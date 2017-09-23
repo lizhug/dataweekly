@@ -15,6 +15,22 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
+%bg1-logo {
+	width: 4.21rem;
+	height: 0.62rem;
+	background-image: url('../img/bg1-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg1-logo.png {
+	width: 4.21rem;
+	height: 0.62rem;
+	background-image: url('../img/bg1-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
 %back {
 	width: 0.43rem;
 	height: 0.43rem;
@@ -42,54 +58,6 @@
 	width: 7.2rem;
 	height: 12.8rem;
 	background-image: url('../img/bg1.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%bg1-logo {
-	width: 4.21rem;
-	height: 0.62rem;
-	background-image: url('../img/bg1-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg1-logo.png {
-	width: 4.21rem;
-	height: 0.62rem;
-	background-image: url('../img/bg1-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%bg2-logo {
-	width: 4.44rem;
-	height: 1.52rem;
-	background-image: url('../img/bg2-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg2-logo.png {
-	width: 4.44rem;
-	height: 1.52rem;
-	background-image: url('../img/bg2-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%bg3-btn1-hov {
-	width: 3.44rem;
-	height: 2.33rem;
-	background-image: url('../img/bg3-btn1-hov.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg3-btn1-hov.png {
-	width: 3.44rem;
-	height: 2.33rem;
-	background-image: url('../img/bg3-btn1-hov.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -127,17 +95,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg3-btn2 {
-	width: 1.99rem;
-	height: 0.51rem;
-	background-image: url('../img/bg3-btn2.png');
+%bg3-btn1-hov {
+	width: 3.44rem;
+	height: 2.33rem;
+	background-image: url('../img/bg3-btn1-hov.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg3-btn2.png {
-	width: 1.99rem;
-	height: 0.51rem;
-	background-image: url('../img/bg3-btn2.png');
+%bg3-btn1-hov.png {
+	width: 3.44rem;
+	height: 2.33rem;
+	background-image: url('../img/bg3-btn1-hov.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -159,6 +127,22 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
+%bg2-logo {
+	width: 4.44rem;
+	height: 1.52rem;
+	background-image: url('../img/bg2-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg2-logo.png {
+	width: 4.44rem;
+	height: 1.52rem;
+	background-image: url('../img/bg2-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
 %bg3-btn3 {
 	width: 2.02rem;
 	height: 0.51rem;
@@ -175,49 +159,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg3-logo {
-	width: 5.56rem;
-	height: 1.23rem;
-	background-image: url('../img/bg3-logo.png');
+%bg3-btn2 {
+	width: 1.99rem;
+	height: 0.51rem;
+	background-image: url('../img/bg3-btn2.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg3-logo.png {
-	width: 5.56rem;
-	height: 1.23rem;
-	background-image: url('../img/bg3-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%bg3-up {
-	width: 0.13rem;
-	height: 0.15rem;
-	background-image: url('../img/bg3-up.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg3-up.png {
-	width: 0.13rem;
-	height: 0.15rem;
-	background-image: url('../img/bg3-up.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%bg3 {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/bg3.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg3.jpg {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/bg3.jpg');
+%bg3-btn2.png {
+	width: 1.99rem;
+	height: 0.51rem;
+	background-image: url('../img/bg3-btn2.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -239,6 +191,22 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
+%bg3-logo {
+	width: 5.56rem;
+	height: 1.23rem;
+	background-image: url('../img/bg3-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg3-logo.png {
+	width: 5.56rem;
+	height: 1.23rem;
+	background-image: url('../img/bg3-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
 %bg4-line1 {
 	width: 0.52rem;
 	height: 0.98rem;
@@ -250,6 +218,22 @@
 	width: 0.52rem;
 	height: 0.98rem;
 	background-image: url('../img/bg4-line1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%bg3-up {
+	width: 0.13rem;
+	height: 0.15rem;
+	background-image: url('../img/bg3-up.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg3-up.png {
+	width: 0.13rem;
+	height: 0.15rem;
+	background-image: url('../img/bg3-up.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -271,6 +255,22 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
+%bg4-line5 {
+	width: 4.29rem;
+	height: 2.59rem;
+	background-image: url('../img/bg4-line5.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg4-line5.png {
+	width: 4.29rem;
+	height: 2.59rem;
+	background-image: url('../img/bg4-line5.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
 %bg4-line3 {
 	width: 1.21rem;
 	height: 0.94rem;
@@ -287,33 +287,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg4-line4 {
-	width: 1.21rem;
-	height: 0.94rem;
-	background-image: url('../img/bg4-line4.png');
+%bg3 {
+	width: 7.2rem;
+	height: 12.8rem;
+	background-image: url('../img/bg3.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg4-line4.png {
-	width: 1.21rem;
-	height: 0.94rem;
-	background-image: url('../img/bg4-line4.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%bg4-line5 {
-	width: 4.29rem;
-	height: 2.59rem;
-	background-image: url('../img/bg4-line5.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg4-line5.png {
-	width: 4.29rem;
-	height: 2.59rem;
-	background-image: url('../img/bg4-line5.png');
+%bg3.jpg {
+	width: 7.2rem;
+	height: 12.8rem;
+	background-image: url('../img/bg3.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -335,6 +319,22 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
+%bg4-line4 {
+	width: 1.21rem;
+	height: 0.94rem;
+	background-image: url('../img/bg4-line4.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg4-line4.png {
+	width: 1.21rem;
+	height: 0.94rem;
+	background-image: url('../img/bg4-line4.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
 %bg4-logo {
 	width: 5.45rem;
 	height: 1.16rem;
@@ -346,38 +346,6 @@
 	width: 5.45rem;
 	height: 1.16rem;
 	background-image: url('../img/bg4-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%bg4 {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/bg4.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg4.jpg {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/bg4.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%bg5-c {
-	width: 4rem;
-	height: 3.99rem;
-	background-image: url('../img/bg5-c.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg5-c.png {
-	width: 4rem;
-	height: 3.99rem;
-	background-image: url('../img/bg5-c.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -399,17 +367,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg5-tab-hov {
-	width: 2.79rem;
-	height: 0.51rem;
-	background-image: url('../img/bg5-tab-hov.png');
+%bg4 {
+	width: 7.2rem;
+	height: 12.8rem;
+	background-image: url('../img/bg4.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg5-tab-hov.png {
-	width: 2.79rem;
-	height: 0.51rem;
-	background-image: url('../img/bg5-tab-hov.png');
+%bg4.jpg {
+	width: 7.2rem;
+	height: 12.8rem;
+	background-image: url('../img/bg4.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -426,6 +394,38 @@
 	width: 2.79rem;
 	height: 0.51rem;
 	background-image: url('../img/bg5-tab.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%bg5-tab-hov {
+	width: 2.79rem;
+	height: 0.51rem;
+	background-image: url('../img/bg5-tab-hov.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg5-tab-hov.png {
+	width: 2.79rem;
+	height: 0.51rem;
+	background-image: url('../img/bg5-tab-hov.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%bg5-c {
+	width: 4rem;
+	height: 3.99rem;
+	background-image: url('../img/bg5-c.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg5-c.png {
+	width: 4rem;
+	height: 3.99rem;
+	background-image: url('../img/bg5-c.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -479,17 +479,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg7 {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/bg7.jpg');
+%c2 {
+	width: 3.07rem;
+	height: 3.05rem;
+	background-image: url('../img/c2.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg7.jpg {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/bg7.jpg');
+%c2.png {
+	width: 3.07rem;
+	height: 3.05rem;
+	background-image: url('../img/c2.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -527,33 +527,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%c2 {
-	width: 3.07rem;
-	height: 3.05rem;
-	background-image: url('../img/c2.png');
+%bg7 {
+	width: 7.2rem;
+	height: 12.8rem;
+	background-image: url('../img/bg7.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%c2.png {
-	width: 3.07rem;
-	height: 3.05rem;
-	background-image: url('../img/c2.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%c3 {
-	width: 3.73rem;
-	height: 3.73rem;
-	background-image: url('../img/c3.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%c3.png {
-	width: 3.73rem;
-	height: 3.73rem;
-	background-image: url('../img/c3.png');
+%bg7.jpg {
+	width: 7.2rem;
+	height: 12.8rem;
+	background-image: url('../img/bg7.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -570,6 +554,22 @@
 	width: 0.2rem;
 	height: 0.25rem;
 	background-image: url('../img/down.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%c3 {
+	width: 3.73rem;
+	height: 3.73rem;
+	background-image: url('../img/c3.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%c3.png {
+	width: 3.73rem;
+	height: 3.73rem;
+	background-image: url('../img/c3.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -602,22 +602,6 @@
 	width: 4.68rem;
 	height: 0.62rem;
 	background-image: url('../img/ind/bg1-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
-%bg6-logo {
-	width: 6.23rem;
-	height: 0.56rem;
-	background-image: url('../img/ind/bg6-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%ind-bg6-logo.png {
-	width: 6.23rem;
-	height: 0.56rem;
-	background-image: url('../img/ind/bg6-logo.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -671,17 +655,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%loading {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/loading.jpg');
+%bg6-logo {
+	width: 6.23rem;
+	height: 0.56rem;
+	background-image: url('../img/ind/bg6-logo.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%loading.jpg {
-	width: 7.2rem;
-	height: 12.8rem;
-	background-image: url('../img/loading.jpg');
+%ind-bg6-logo.png {
+	width: 6.23rem;
+	height: 0.56rem;
+	background-image: url('../img/ind/bg6-logo.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -719,6 +703,22 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
+%loading {
+	width: 7.2rem;
+	height: 12.8rem;
+	background-image: url('../img/loading.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%loading.jpg {
+	width: 7.2rem;
+	height: 12.8rem;
+	background-image: url('../img/loading.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
 %share {
 	width: 0.43rem;
 	height: 0.43rem;
@@ -735,22 +735,6 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%slide {
-	width: 0.88rem;
-	height: 0.49rem;
-	background-image: url('../img/slide.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%slide.png {
-	width: 0.88rem;
-	height: 0.49rem;
-	background-image: url('../img/slide.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %slide2 {
 	width: 0.96rem;
 	height: 0.78rem;
@@ -762,6 +746,22 @@
 	width: 0.96rem;
 	height: 0.78rem;
 	background-image: url('../img/slide2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%slide {
+	width: 0.88rem;
+	height: 0.49rem;
+	background-image: url('../img/slide.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%slide.png {
+	width: 0.88rem;
+	height: 0.49rem;
+	background-image: url('../img/slide.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }

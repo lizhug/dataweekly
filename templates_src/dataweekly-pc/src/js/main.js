@@ -143,14 +143,20 @@ $(function() {
         var graph_inter,
                month = getUrlParams('month'),
                 week = getUrlParams('week'),
+                lang = getUrlParams('lang') || "en",
                 name = getUrlParams('name');
         var initData = function () {
                 var nameArr =[];
             $.ajax({
-                url:'http://dataweekly.z1025.com/index.php?c=index&f=get_data_jsonp&month='+month+'&week='+week+'&name='+name,
+                url:'http://dataweekly.z1025.com/index.php?c=index&f=get_data_jsonp&month='+month+'&week='+week+'&name='+name+'&lang='+lang,
                 dataType:'jsonp',
                 type:'POST',
                 success:function (data) {
+                    if(lang == 'id'){
+                        $('html').attr('lang','id')
+                        $('body').addClass('in')
+                    }
+
                     var o_data = JSON.parse(data.data.data);
                     $('.actor-img').attr('src',o_data.image);
                     $('.actor-name').text(o_data.name);
