@@ -34,10 +34,11 @@ class index extends engine {
         $month = $_GET['month'];
         $week = $_GET['week'];
         $name = $_GET['name'];
+        $lang = $_GET['lang'];
 
         $link = D();
 
-        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' LIMIT 1");
+        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' AND lang = '" . $lang . "' LIMIT 1");
 
         $row = mysqli_fetch_assoc($result);
 
@@ -45,6 +46,7 @@ class index extends engine {
             "month" => $month,
             "week" => $week,
             "name" => $name,
+            "lang" => $lang,
             "data" => $row
         ));
     }
@@ -53,10 +55,12 @@ class index extends engine {
         $month = $_GET['month'];
         $week = $_GET['week'];
         $name = $_GET['name'];
+        $lang = $_GET['lang'];
+
 
         $link = D();
 
-        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' LIMIT 1");
+        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' AND lang = '" . $lang . "' LIMIT 1");
 
         $row = mysqli_fetch_assoc($result);
 
@@ -64,6 +68,7 @@ class index extends engine {
             "month" => $month,
             "week" => $week,
             "name" => $name,
+            "lang" => $lang,
             "data" => $row
         )) . ')';
     }
@@ -71,7 +76,9 @@ class index extends engine {
     public function get_data_list() {
         $link = D();
 
-        $result = $link->query("SELECT * FROM data");
+        $lang = $_REQUEST['lang'];
+
+        $result = $link->query("SELECT * FROM data WHERE lang = '" . $lang . "'");
 
         $data = [];
 
@@ -95,7 +102,9 @@ class index extends engine {
     public function get_data_list_jsonp() {
         $link = D();
 
-        $result = $link->query("SELECT * FROM data");
+        $lang = $_REQUEST['lang'];
+
+        $result = $link->query("SELECT * FROM data WHERE lang = '" . $lang . "'");
 
         $data = [];
 
@@ -112,20 +121,21 @@ class index extends engine {
         $month = $data['month'];
         $week = $data['week'];
         $name = $data['name'];
+        $lang = $data['lang'];
         $data2 = json_encode($data);
 
         $link = D();
 
-        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' LIMIT 1");
+        $result = $link->query("SELECT * FROM data WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' AND lang = '" . $lang . "' LIMIT 1");
         if (is_array(mysqli_fetch_assoc($result))) {
-           $result = $link->query("UPDATE data SET data= '" . $data2 . "' WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "'");
+           $result = $link->query("UPDATE data SET data= '" . $data2 . "' WHERE month = '" . $month . "' AND week = '" . $week . "' AND name = '" . $name . "' AND lang = '" . $lang . "'");
 
            echo json_encode(array(
                 "code" => "200",
                 "message" => "数据更新成功"
             ));
         } else {
-            $result = $link->query("INSERT INTO data(`month`, `week`, `name`, `data`) VALUES ('" . $month . "', '" . $week . "', '" . $name . "', '" . $data2 . "')");
+            $result = $link->query("INSERT INTO data(`month`, `week`, `name`, `lang`, `data`) VALUES ('" . $month . "', '" . $week . "', '" . $name . "', '" . $lang . "', '" . $data2 . "')");
 
             echo json_encode(array(
                 "code" => "200",

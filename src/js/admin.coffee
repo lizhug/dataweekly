@@ -34,6 +34,7 @@ vm = new Vue({
 			qa_rule: "qa的规则介绍"
 			qa_image: "qa图片"
 			qa_btn: "qa按钮"
+			lang: "en"
 			hotComment: [
 				{
 					name: "David"
@@ -101,6 +102,9 @@ vm = new Vue({
 			this.$http.post(
 				"/index.php?c=index&f=get_data_list"
 				{
+					lang: "en"
+				}
+				{
 					emulateJSON: true
 				}
 			).then((res) ->
@@ -117,11 +121,12 @@ vm = new Vue({
 		initPage: ->
 			week = document.getElementById("data-week").value
 			month = document.getElementById("data-month").value
+			name = document.getElementById("data-name").value
+			lang = document.getElementById("data-lang").value
 			
 			if month 
 				for item in this.list
-					console.log item['week'] == week, item['week'], item['month'], month, week
-					if item['month'] is month and item['week'] is week
+					if item['month'] is month and item['week'] is week and item['name'] is name and item['lang'] is lang
 						this.data = item['data']
 						break
 	mounted: ->
