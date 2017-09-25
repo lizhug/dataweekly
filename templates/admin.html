@@ -78,6 +78,14 @@
 			</td>
 		</tr>
 	</table>
+	
+	<label>折线数据点</label>
+	<input type="text" v-model="data.lineData" class="form-control" placeholder="August" />
+	<label>语言</label>
+	<select class="form-control" v-model="data.lang">
+		<option value="en">英语</option>
+		<option value="id">印地语</option>
+	</select>
 	<span class="btn btn-primary" @click="submitData">提交</span>
 	<h2>数据列表，点击可进行更改</h2>
 	<ul>
@@ -90,13 +98,8 @@
 		<li><a href="index.php?c=index&f=admin">新增</a></li>
 		{/literal}
 	</ul>
-	<label>折线数据点</label>
-	<input type="text" v-model="data.lineData" class="form-control" placeholder="August" />
-	<label>语言</label>
-	<select class="form-control" v-model="data.lang">
-		<option value="en">英语</option>
-		<option value="id">印地语</option>
-	</select>
+	<a href="/index.php?c=index&f=admin&lang=id">印地语列表</a>
+	<a href="/index.php?c=index&f=admin&lang=en">英语列表</a>
 	<input type="hidden" value="{$smarty.get.month}" id="data-month" />
 	<input type="hidden" value="{$smarty.get.week}" id="data-week" />
 	<input type="hidden" value="{$smarty.get.name}" id="data-name" />

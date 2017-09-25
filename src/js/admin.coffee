@@ -2,6 +2,7 @@ vm = new Vue({
 	el: ".container",
 	data: 
 		list: []
+		lang: "en"
 		data: 
 			month: "August"
 			week: "4th Week"
@@ -102,7 +103,7 @@ vm = new Vue({
 			this.$http.post(
 				"/index.php?c=index&f=get_data_list"
 				{
-					lang: "en"
+					lang: this.lang
 				}
 				{
 					emulateJSON: true
@@ -130,6 +131,13 @@ vm = new Vue({
 						this.data = item['data']
 						break
 	mounted: ->
+		
+
+		for item in window.location.search.split("&")
+			tmp = item.split("=")
+			if tmp[0] is "lang"
+				this.lang = tmp[1]
+
 		this.getDataList();
 
 })
