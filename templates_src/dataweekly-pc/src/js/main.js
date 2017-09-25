@@ -215,7 +215,7 @@ $(function() {
 
             //check history
                 $.ajax({
-                    url:'http://dataweekly.z1025.com/index.php?c=index&f=get_data_list_jsonp',
+                    url:'http://dataweekly.z1025.com/index.php?c=index&f=get_data_list_jsonp&lang='+lang,
                     dataType:'jsonp',
                     type:'POST',
                     success:function (data) {
