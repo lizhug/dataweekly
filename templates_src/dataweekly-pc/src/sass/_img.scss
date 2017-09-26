@@ -1,20 +1,4 @@
 // -----------------------------------------------
-%bg1 {
-	width: 1920px;
-	height: 1080px;
-	background-image: url('../img/bg1.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-%bg1.jpg {
-	width: 1920px;
-	height: 1080px;
-	background-image: url('../img/bg1.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %bg2 {
 	width: 1920px;
 	height: 1080px;
@@ -31,17 +15,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg3 {
+%bg1 {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('../img/bg3.jpg');
+	background-image: url('../img/bg1.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg3.jpg {
+%bg1.jpg {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('../img/bg3.jpg');
+	background-image: url('../img/bg1.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -79,17 +63,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg4 {
+%bg3 {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('../img/bg4.jpg');
+	background-image: url('../img/bg3.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg4.jpg {
+%bg3.jpg {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('../img/bg4.jpg');
+	background-image: url('../img/bg3.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -111,17 +95,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg5 {
+%bg4 {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('../img/bg5.jpg');
+	background-image: url('../img/bg4.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg5.jpg {
+%bg4.jpg {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('../img/bg5.jpg');
+	background-image: url('../img/bg4.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -143,17 +127,17 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg6 {
+%bg5 {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('../img/bg6.jpg');
+	background-image: url('../img/bg5.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-%bg6.jpg {
+%bg5.jpg {
 	width: 1920px;
 	height: 1080px;
-	background-image: url('../img/bg6.jpg');
+	background-image: url('../img/bg5.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -202,6 +186,22 @@
 	width: 303px;
 	height: 304px;
 	background-image: url('../img/circle2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%bg6 {
+	width: 1920px;
+	height: 1080px;
+	background-image: url('../img/bg6.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+%bg6.jpg {
+	width: 1920px;
+	height: 1080px;
+	background-image: url('../img/bg6.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -321,20 +321,6 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg3-logo2 {
-	width: 878px;
-	height: 74px;
-	background-image: url('../img/slice/bg3-logo2.png');
-	background-repeat: no-repeat;
-}
-%slice-bg3-logo2.png {
-	width: 878px;
-	height: 74px;
-	background-image: url('../img/slice/bg3-logo2.png');
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %bg4-logo1 {
 	width: 323px;
 	height: 59px;
@@ -345,6 +331,20 @@
 	width: 323px;
 	height: 59px;
 	background-image: url('../img/slice/bg4-logo1.png');
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%bg3-logo2 {
+	width: 878px;
+	height: 74px;
+	background-image: url('../img/slice/bg3-logo2.png');
+	background-repeat: no-repeat;
+}
+%slice-bg3-logo2.png {
+	width: 878px;
+	height: 74px;
+	background-image: url('../img/slice/bg3-logo2.png');
 	background-repeat: no-repeat;
 }
 // -----------------------------------------------
@@ -433,20 +433,6 @@
 }
 // -----------------------------------------------
 // -----------------------------------------------
-%bg6-icon {
-	width: 129px;
-	height: 93px;
-	background-image: url('../img/slice/bg6-icon.png');
-	background-repeat: no-repeat;
-}
-%slice-bg6-icon.png {
-	width: 129px;
-	height: 93px;
-	background-image: url('../img/slice/bg6-icon.png');
-	background-repeat: no-repeat;
-}
-// -----------------------------------------------
-// -----------------------------------------------
 %bg6-line1 {
 	width: 52px;
 	height: 93px;
@@ -457,6 +443,20 @@
 	width: 52px;
 	height: 93px;
 	background-image: url('../img/slice/bg6-line1.png');
+	background-repeat: no-repeat;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+%bg6-icon {
+	width: 129px;
+	height: 93px;
+	background-image: url('../img/slice/bg6-icon.png');
+	background-repeat: no-repeat;
+}
+%slice-bg6-icon.png {
+	width: 129px;
+	height: 93px;
+	background-image: url('../img/slice/bg6-icon.png');
 	background-repeat: no-repeat;
 }
 // -----------------------------------------------

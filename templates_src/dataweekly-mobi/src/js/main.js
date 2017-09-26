@@ -494,14 +494,7 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                                 formatter: "{b} : {d}%"
                             },
 
-                            visualMap: {
-                                show: false,
-                                min:data.social,
-                                max:data.media,
-                                inRange: {
-                                    colorAlpha: [.1, .68]
-                                }
-                            },
+                            color: ['rgba(255, 198, 63, .68)','rgba(255, 198, 63, .1)','rgba(255, 198, 63, .31)','rgba(255, 198, 63, .2)'],
                             series : [
                                 {
                                     name:'访问来源',
@@ -522,11 +515,6 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                                             lineStyle:{
                                                 color:'#ffc63f'
                                             }
-                                        }
-                                    },
-                                    itemStyle: {
-                                        normal: {
-                                            color: '#ffc63f'
                                         }
                                     },
 

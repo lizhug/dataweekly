@@ -333,14 +333,8 @@ $(function() {
                                 trigger: 'item',
                                 formatter: "{b} : {d}%"
                             },
-                            visualMap: {
-                                show:false,
-                                min:o_data.social,
-                                max:o_data.media,
-                                inRange: {
-                                    colorAlpha: [.1, .68]
-                                }
-                            },
+                            color: ['rgba(255, 198, 63, .68)','rgba(255, 198, 63, .1)','rgba(255, 198, 63, .31)','rgba(255, 198, 63, .2)'],
+
                             series : [
                                 {
                                     type: 'pie',
@@ -362,11 +356,6 @@ $(function() {
                                                 color:'#ffc63f'
                                             }
                                         }
-                                    },
-                                    itemStyle: {
-                                        normal:{
-                                            color:'#ffc63f'
-                                        }
                                     }
                                 }
                             ]
@@ -385,14 +374,7 @@ $(function() {
                                 trigger: 'item',
                                 formatter: "{b} : {d}%"
                             },
-                            visualMap: {
-                                show:false,
-                                min:o_data.euc,
-                                max:o_data.eother,
-                                inRange: {
-                                    colorAlpha: [.1, .68]
-                                }
-                            },
+                            color: ['rgba(31, 69, 120, .1)','rgba(31, 69, 120, .3)','rgba(31, 69, 120, 0.9)'],
                             series : [
                                 {
                                     type: 'pie',
@@ -413,11 +395,6 @@ $(function() {
                                             lineStyle:{
                                                 color:'#489aee'
                                             }
-                                        }
-                                    },
-                                    itemStyle: {
-                                        normal:{
-                                            color:'#1f4578'
                                         }
                                     }
                                 }
