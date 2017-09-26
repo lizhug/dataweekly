@@ -763,14 +763,7 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                         right:'5%',
                         bottom:25
                     },
-                    visualMap: {
-                        show:false,
-                        min:80,
-                        max:600,
-                        inRange: {
-                            colorAlpha: [.1, .68]
-                        }
-                    },
+                    color: ['rgba(31, 69, 120, .1)','rgba(31, 69, 120, .3)','rgba(31, 69, 120, 0.9)'],
                     tooltip : {
                         trigger: 'item',
                         formatter: "{b} : {d}%"
@@ -794,11 +787,6 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                                     lineStyle:{
                                         color:'#489aee'
                                     }
-                                }
-                            },
-                            itemStyle: {
-                                normal:{
-                                    color:'#1f4578'
                                 }
                             }
                         }
