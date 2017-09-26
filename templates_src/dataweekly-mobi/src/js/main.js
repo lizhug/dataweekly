@@ -300,15 +300,15 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                     //饼图
                     $('#art-num').text(o_data.article)
                     $('#article_txt').html(o_data.article_txt)
-                    pie1_data[0] = {"value":o_data.platform,"name":"platform"}
-                    pie1_data[1] = {"value":o_data.media,"name":"media"}
-                    pie1_data[2] = {"value":o_data.social,"name":"social"}
-                    pie1_data[3] = {"value":o_data.uc,"name":"uc"}
+                    pie1_data.push({"value":parseInt(o_data.platform),"name":"platform"})
+                    pie1_data.push({"value":parseInt(o_data.media),"name":"media"})
+                    pie1_data.push({"value":parseInt(o_data.social),"name":"social"})
+                    pie1_data.push({"value":parseInt(o_data.uc),"name":"uc"})
                     $('#eng-num').text(o_data.engagement)
                     $('#engagement_txt').html(o_data.engagement_txt)
-                    pie2_data[0] = {"value":o_data.euc,"name":"euc"}
-                    pie2_data[1] = {"value":o_data.emedia,"name":"emedia"}
-                    pie2_data[2] = {"value":o_data.eother,"name":"eother"};
+                    pie2_data.push({"value":parseInt(o_data.euc),"name":"euc"})
+                    pie2_data.push({"value":parseInt(o_data.emedia),"name":"emedia"})
+                    pie2_data.push({"value":parseInt(o_data.eother),"name":"eother"});
 
                     //评论
                     if(o_data.hotComment.length<=5){
@@ -754,6 +754,7 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                 $('.bg5-btn1').removeClass('bg5-tab-on');
                 $('.tab-cont2').removeClass('hide');
                 $('.tab-cont1').addClass('hide');
+                console.log('fuck')
                 var chart5 = echarts.init(document.getElementById('echart5'));
                 var chart5_opt ={
                     grid:{
@@ -764,8 +765,8 @@ function swiperAnimateCache(){for(allBoxes=window.document.documentElement.query
                     },
                     visualMap: {
                         show:false,
-                        min:o_data.euc,
-                        max:o_data.eother,
+                        min:80,
+                        max:600,
                         inRange: {
                             colorAlpha: [.1, .68]
                         }

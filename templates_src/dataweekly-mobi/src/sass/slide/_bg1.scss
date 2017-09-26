@@ -34,11 +34,7 @@
   transform: translate3d(-50%,0,0);
   z-index: 80;
 }
-.in{
-  .bg1-logo-bg{
-    @extend %ind-bg1-logo.png;
-    }
-}
+
 .bg1-logo{
   @extend %bg1-logo;
   position: absolute;
@@ -47,6 +43,11 @@
   transform: translate3d(-50%,0,0);
   z-index: 99;
   text-indent:-999em;
+}
+.in{
+  .bg1-logo{
+    @extend %ind-bg1-logo.png;
+  }
 }
 .bg1-title{
   @extend %sub-title;
